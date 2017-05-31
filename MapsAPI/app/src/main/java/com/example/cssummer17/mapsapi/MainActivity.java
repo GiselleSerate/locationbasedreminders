@@ -3,59 +3,112 @@ package com.example.cssummer17.mapsapi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-final TextView mTextView = (TextView) findViewById(R.id.text);
+public void volleyStringRequst(String url){
 
-TextView mTxtDisplay;
-ImageView mImageView;
-mTxtDisplay = (TextView) findViewById(R.id.txtDisplay);
-String url = "http://my-json-feed";
+        String REQUEST_TAG="com.androidtutorialpoint.volleyStringRequest";
+        progressDialog.setMessage("Loading...");
+        progressDialog.show();
 
+        StringRequest strReq=new StringRequest(url,new Response.Listener<String>(){
+@Override
+public void onResponse(String response){
+        Log.d(TAG,response.toString());
 
-public class MainActivity extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
-    // Instantiate the RequestQueue.
-    RequestQueue queue = Volley.newRequestQueue(this);
-    String url ="http://www.google.com";
-
-    // Request a string response from the provided URL.
-    StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
-            new Response.Listener<String>() {
-                @Override
-                public void onResponse(String response) {
-                    // Display the first 500 characters of the response string.
-                    mTextView.setText("Response is: "+ response.substring(0,500));
-                }
-            }, new Response.ErrorListener() {
-        @Override
-        public void onErrorResponse(VolleyError error) {
-            mTextView.setText("That didn't work!");
+        LayoutInflater li=LayoutInflater.from(MainActivity.this);
+        showDialogView=li.inflate(R.layout.show_dialog,null);
+        outputTextView=(TextView)showDialogView.findViewById(R.id.text_view_dialog);
+        AlertDialog.Builder alertDialogBuilder=new AlertDialog.Builder(MainActivity.this);
+        alertDialogBuilder.setView(showDialogView);
+        alertDialogBuilder
+        .setPositiveButton("OK",new DialogInterface.OnClickListener(){
+public void onClick(DialogInterface dialog,int id){
         }
-    });
-    // Add the request to the RequestQueue.
-    queue.add(stringRequest);
-    JsonObjectRequest jsObjRequest = new JsonObjectRequest
-            (Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+        })
+        .setCancelable(false)
+        .create();
+        outputTextView.setText(response.toString());
+        alertDialogBuilder.show();
+        progressDialog.hide();
+        }
+        },new Response.ErrorListener(){
 
-                @Override
-                public void onResponse(JSONObject response) {
-                    mTxtDisplay.setText("Response: " + response.toString());
-                }
-            }, new Response.ErrorListener() {
+@Override
+public void onErrorResponse(VolleyError error){
+        VolleyLog.d(TAG,"Error: "+error.getMessage());
+        progressDialog.hide();
+        }
+        });
+        // Adding String request to request queue
+        AppSingleton.getInstance(getApplicationContext()).addToRequestQueue(strReq,REQUEST_TAG);
+        }
 
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                    // TODO Auto-generated method stub
+public void volleyJsonObjectRequest(String url){
 
-                }
-            });
+        String  REQUEST_TAG = "com.androidtutorialpoint.volleyJsonObjectRequest";
+        progressDialog.setMessage("Loading...");
+        progressDialog.show();
 
-// Access the RequestQueue through your singleton class.
-        MySingleton.getInstance(this).addToRequestQueue(jsObjRequest);
-}
+        JsonObjectRequest jsonObjectReq = new JsonObjectRequest(url, null,
+        new Response.Listener<JSONObject>() {
+@Override
+public void onResponse(JSONObject response) {
+        Log.d(TAG, response.toString());
 
+        LayoutInflater li = LayoutInflater.from(MainActivity.this);
+        showDialogView = li.inflate(R.layout.show_dialog, null);
+        outputTextView = (TextView)showDialogView.findViewById(R.id.text_view_dialog);
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(MainActivity.this);
+        alertDialogBuilder.setView(showDialogView);
+        alertDialogBuilder
+        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+public void onClick(DialogInterface dialog, int id) {
+        }
+        })
+        .setCancelable(false)
+        .create();
+        outputTextView.setText(response.toString());
+        alertDialogBuilder.show();
+        progressDialog.hide();
 
+        }
+        }, new Response.ErrorListener() {
+@Override
+public void onErrorResponse(VolleyError error) {
+        VolleyLog.d(TAG, "Error: " + error.getMessage());
+        progressDialog.hide();
+        }
+        });
+
+        // Adding JsonObject request to request queue
+        AppSingleton.getInstance(getApplicationContext()).addToRequestQueue(jsonObjectReq,REQUEST_TAG);
+        }
+
+// CACHE HANDLING?????
+public void volleyCacheRequest(String url){
+        Cache cache = AppSingleton.getInstance(getApplicationContext()).getRequestQueue().getCache();
+        Cache.Entry reqEntry = cache.get(url);
+        if(reqEntry != null){
+        try {
+        String data = new String(reqEntry.data, "UTF-8");
+        //Handle the Data here.
+        } catch (UnsupportedEncodingException e) {
+        e.printStackTrace();
+        }
+        }
+        else{
+
+        //Request Not present in cache, launch a network request instead.
+        }
+        }
+
+public void volleyInvalidateCache(String url){
+        AppSingleton.getInstance(getApplicationContext()).getRequestQueue().getCache().invalidate(url, true);
+        }
+
+public void volleyDeleteCache(String url){
+        AppSingleton.getInstance(getApplicationContext()).getRequestQueue().getCache().remove(url);
+        }
+
+public void volleyClearCache(){
+        AppSingleton.getInstance(getApplicationContext()).getRequestQueue().getCache().clear();
+        }
