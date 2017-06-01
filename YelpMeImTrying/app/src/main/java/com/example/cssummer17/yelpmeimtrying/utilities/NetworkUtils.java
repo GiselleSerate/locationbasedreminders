@@ -30,28 +30,27 @@ import java.util.Scanner;
  */
 public class NetworkUtils {
 
-    final static String GITHUB_BASE_URL =
-            "https://api.github.com/search/repositories";
+    final static String YELP_BASE_URL =
+            "https://api.yelp.com/v2/search";
 
-    final static String PARAM_QUERY = "q";
+    final static String PARAM_QUERY = "term";
 
     /*
-     * The sort field. One of stars, forks, or updated.
-     * Default: results are sorted by best match if no field is specified.
+     * Location set to be Claremont for now.
      */
-    final static String PARAM_SORT = "sort";
-    final static String sortBy = "stars";
+    final static String PARAM_LOC = "location";
+    final static String location = "Claremont";
 
     /**
      * Builds the URL used to query GitHub.
      *
-     * @param githubSearchQuery The keyword that will be queried for.
+     * @param searchQuery The keyword that will be queried for.
      * @return The URL to use to query the GitHub.
      */
-    public static URL buildUrl(String githubSearchQuery) {
-        Uri builtUri = Uri.parse(GITHUB_BASE_URL).buildUpon()
-                .appendQueryParameter(PARAM_QUERY, githubSearchQuery)
-                .appendQueryParameter(PARAM_SORT, sortBy)
+    public static URL buildUrl(String searchQuery) {
+        Uri builtUri = Uri.parse(YELP_BASE_URL).buildUpon()
+                .appendQueryParameter(PARAM_QUERY, searchQuery)
+                .appendQueryParameter(PARAM_LOC, location)
                 .build();
 
         URL url = null;
