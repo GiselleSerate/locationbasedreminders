@@ -27,5 +27,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
+    // This is the only (only?) non-default line in the build.gradle file, and it connects us to google play services so that we can actually use this api stuff
     compile 'com.google.android.gms:play-services:8.4.0'
 }

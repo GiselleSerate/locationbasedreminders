@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--All of this stuff is padding and so forth, formatting. yeah-->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,6 +10,7 @@
     android:paddingBottom="60sp"
     tools:context=".MainActivity">
 
+    <!--We put the place name here.-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -17,6 +19,7 @@
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"/>
 
+    <!--We put the place address here.-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,6 +27,7 @@
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"/>
 
+    <!--A button for pressing to bring up the API picker. Kind of important.-->
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -33,6 +37,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"/>
 
+    <!--This TextView is for attributions. We end up putting stuff in here.-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -41,14 +46,15 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"/>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/textView3"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/poweredBy"
-        android:src="@drawable/powered_by_google_light"/>
+    <!--Attribution, very deleteable. haha sorry Google maybe it's not legally deleteable?-->
+    <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_above="@+id/textView3"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:id="@+id/poweredBy"-->
+        <!--android:src="@drawable/powered_by_google_light"/>-->
 
     <!--<ImageView-->
         <!--android:layout_width="100dp"-->
