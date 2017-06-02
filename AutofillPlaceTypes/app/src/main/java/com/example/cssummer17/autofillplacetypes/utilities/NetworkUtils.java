@@ -20,10 +20,9 @@ public class NetworkUtils {
 
     final static String PARAM_FORMAT = "json";
 
-    /*
-     * The sort field. One of stars, forks, or updated.
-     * Default: results are sorted by best match if no field is specified.
-     */
+    final static String PARAM_KEY = "key";
+    final static String key = "AIzaSyAja6UlAzBSDYIgLJ1RCCHd6fVf9NN6V7Q";
+
     final static String PARAM_LOCATION = "location";
     final static String location = "-33.8670522,151.1957362"; // lat/long of the thing.
 
@@ -45,6 +44,7 @@ public class NetworkUtils {
         Uri builtUri = Uri.parse(GITHUB_BASE_URL).buildUpon()
                 .appendPath(PARAM_FORMAT)
                 .appendQueryParameter(PARAM_LOCATION, location)
+                .appendQueryParameter(PARAM_KEY, key)
                 .appendQueryParameter(PARAM_RADIUS, radius)
                 .appendQueryParameter(PARAM_TYPE, type)
                 .build();

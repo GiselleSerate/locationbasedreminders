@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.text.Html;
 
@@ -25,6 +26,8 @@ import java.net.URL;
 public class MainActivity extends AppCompatActivity {
     private static final int PLACE_PICKER_REQUEST = 1; // internally recognized code for the request we're doing
     private TextView mName;                         // we write our place name to this var
+    private EditText mSearchBoxEditText;
+
     private TextView mUrlDisplayTextView;
     private TextView mSearchResultsTextView;      // we write our place address to this var
 
@@ -32,6 +35,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mSearchBoxEditText = (EditText) findViewById(R.id.et_search_box);
+
+        mUrlDisplayTextView = (TextView) findViewById(R.id.tv_url_display);
+        mSearchResultsTextView = (TextView) findViewById(R.id.tv_github_search_results_json);
     }
 
 
