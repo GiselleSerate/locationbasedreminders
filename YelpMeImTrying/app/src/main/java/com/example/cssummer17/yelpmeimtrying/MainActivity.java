@@ -15,9 +15,10 @@ package com.example.cssummer17.yelpmeimtrying;
  * limitations under the License.
  */
 
-import android.accounts.AccountManager;
+import android.accounts.AccountManager; // these three are leftovers from when I was trying OAuth. rawr
 import android.accounts.AccountManagerCallback;
 import android.accounts.AccountManagerFuture;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -25,6 +26,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.view.View;
 
 import com.example.cssummer17.yelpmeimtrying.utilities.NetworkUtils;
 
@@ -39,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView mSearchResultsTextView;
 
+    public static final String EXTRA_MESSAGE = "com.cssummer17.yelpmeimtrying.MESSAGE";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +52,14 @@ public class MainActivity extends AppCompatActivity {
 
         mUrlDisplayTextView = (TextView) findViewById(R.id.tv_url_display);
         mSearchResultsTextView = (TextView) findViewById(R.id.tv_github_search_results_json);
+    }
+
+    public void sendMessage(View view) { // what happens when you click the button
+        Intent intent = new Intent(this, MapsActivity.class);
+        EditText editText = (EditText) findViewById(R.id.et_search_box);
+        String message = editText.getText().toString();
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
     }
 
     /**

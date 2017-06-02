@@ -48,4 +48,11 @@
             android:text="Make a search!"
             android:textSize="18sp" />
     </ScrollView>
+
+    <Button
+        android:id="@+id/buttony"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="sendMessage"
+        android:text="Button" />
 </LinearLayout>
