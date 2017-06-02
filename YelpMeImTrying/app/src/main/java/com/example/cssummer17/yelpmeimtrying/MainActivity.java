@@ -29,11 +29,20 @@ import android.widget.TextView;
 import android.view.View;
 
 import com.example.cssummer17.yelpmeimtrying.utilities.NetworkUtils;
+import com.google.android.gms.common.api.GoogleApiClient;
 
 import java.io.IOException;
 import java.net.URL;
 
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
+//import gms.places.*; // It's throwing a fit. Maybe not this one.
+import android.support.v4.app.FragmentActivity; //hmmmaybenotttt I'm using AppCompatActivity. and now I'm onto another tutorial.
+
+
 public class MainActivity extends AppCompatActivity {
+
+    private GoogleApiClient mGoogleApiClient;
 
     private EditText mSearchBoxEditText;
 
@@ -52,6 +61,14 @@ public class MainActivity extends AppCompatActivity {
 
         mUrlDisplayTextView = (TextView) findViewById(R.id.tv_url_display);
         mSearchResultsTextView = (TextView) findViewById(R.id.tv_github_search_results_json);
+
+//        // GOOGLE PLAY SERVICES FOR PLACES
+//        mGoogleApiClient = new GoogleApiClient.Builder(this)
+//                .enableAutoManage(this /* FragmentActivity */,
+//                        this /* OnConnectionFailedListener */)
+//                .addApi(Places.API)
+//                .addScope(Places.SCOPE_FILE)
+//                .build();
     }
 
     public void sendMessage(View view) { // what happens when you click the button
