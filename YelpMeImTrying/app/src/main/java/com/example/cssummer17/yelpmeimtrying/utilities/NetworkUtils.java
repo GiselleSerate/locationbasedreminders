@@ -34,6 +34,8 @@ public class NetworkUtils {
     final static String YELP_BASE_URL =
             "https://api.yelp.com/v2/search";
 
+    final static String KEY_NAME = "key";
+
     final static String PARAM_QUERY = "term";
 
     /*
@@ -43,13 +45,14 @@ public class NetworkUtils {
     final static String location = "Claremont";
 
     /**
-     * Builds the URL used to query GitHub.
+     * Builds the URL used to query GitHub. Yelp. Google. aAaah I don't know.
      *
      * @param searchQuery The keyword that will be queried for.
      * @return The URL to use to query the GitHub.
      */
     public static URL buildUrl(String searchQuery) {
         Uri builtUri = Uri.parse(YELP_BASE_URL).buildUpon()
+                .appendQueryParameter(KEY_NAME, key.mapsKey)
                 .appendQueryParameter(PARAM_QUERY, searchQuery)
                 .appendQueryParameter(PARAM_LOC, location)
                 .build();
