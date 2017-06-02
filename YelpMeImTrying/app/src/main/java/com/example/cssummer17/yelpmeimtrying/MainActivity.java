@@ -39,32 +39,6 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView mSearchResultsTextView;
 
-// TODO: Here is for OAuth
-
-    private void getOAuth extends AsyncTask<URL, Void, String>() {
-
-        AccountManager am = AccountManager.get(this);
-        Bundle options = new Bundle();
-
-        private class OnTokenAcquired implements AccountManagerCallback<Bundle> {
-            @Override
-            public void run(AccountManagerFuture<Bundle> result) {
-                Bundle bundle = result.getResult();
-
-                token = bundle.getString(AccountManager.KEY_AUTHTOKEN);
-            }
-        }
-
-        am.getAuthToken(
-                myAccount_,
-                "Read",
-                options,
-                this,
-                new OnTokenAcquired(),
-                new Handler(new OnError())
-        );
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
 
         mUrlDisplayTextView = (TextView) findViewById(R.id.tv_url_display);
         mSearchResultsTextView = (TextView) findViewById(R.id.tv_github_search_results_json);
-        this.getOAuth();
     }
 
     /**
