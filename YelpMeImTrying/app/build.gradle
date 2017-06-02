@@ -19,6 +19,10 @@ android {
     }
 }
 
+repositories { // these three lines are for the Google API client libraries
+    mavenCentral()
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -27,4 +31,8 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
+    compile 'com.google.api-client:google-api-client:1.22.0' // this particular line for Google API client libraries
+
+    compile 'com.google.code.findbugs:jsr305:2.0.1' // fixed one gradle sync issue
 }
+
