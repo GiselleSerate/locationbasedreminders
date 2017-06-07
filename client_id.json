@@ -3,12 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>875336013949-aknrqv7jshdlv5cjhko8a0o4ug7uqub3.apps.googleusercontent.com</string>
+	<string>770350056373-lct27g6ovocd8pih62pniv7br5h7p8tc.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.875336013949-aknrqv7jshdlv5cjhko8a0o4ug7uqub3</string>
+	<string>com.googleusercontent.apps.770350056373-lct27g6ovocd8pih62pniv7br5h7p8tc</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>TestCode.cssummer17</string>
+	<string>com.startup.CalendarPlay</string>
 </dict>
 </plist>
