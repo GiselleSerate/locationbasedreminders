@@ -14,6 +14,9 @@
 		CBACC91D1EE7785800E702AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBACC91B1EE7785800E702AB /* LaunchScreen.storyboard */; };
 		CBACC9281EE7785800E702AB /* TestCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBACC9271EE7785800E702AB /* TestCodeTests.swift */; };
 		CBACC9331EE7785800E702AB /* TestCodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBACC9321EE7785800E702AB /* TestCodeUITests.swift */; };
+		CBBCA2781EE872A8008B5021 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBBCA2771EE872A8008B5021 /* GoogleService-Info.plist */; };
+		CBBCA2791EE872A8008B5021 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBBCA2771EE872A8008B5021 /* GoogleService-Info.plist */; };
+		CBBCA27A1EE872A8008B5021 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBBCA2771EE872A8008B5021 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,7 @@
 		CBACC92E1EE7785800E702AB /* TestCodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestCodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBACC9321EE7785800E702AB /* TestCodeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCodeUITests.swift; sourceTree = "<group>"; };
 		CBACC9341EE7785800E702AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBBCA2771EE872A8008B5021 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		CBACC9061EE7785700E702AB = {
 			isa = PBXGroup;
 			children = (
+				CBBCA2771EE872A8008B5021 /* GoogleService-Info.plist */,
 				CBACC9111EE7785700E702AB /* TestCode */,
 				CBACC9261EE7785800E702AB /* TestCodeTests */,
 				CBACC9311EE7785800E702AB /* TestCodeUITests */,
@@ -233,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBACC91D1EE7785800E702AB /* LaunchScreen.storyboard in Resources */,
+				CBBCA2781EE872A8008B5021 /* GoogleService-Info.plist in Resources */,
 				CBACC91A1EE7785800E702AB /* Assets.xcassets in Resources */,
 				CBACC9181EE7785800E702AB /* Main.storyboard in Resources */,
 			);
@@ -242,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBBCA2791EE872A8008B5021 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBBCA27A1EE872A8008B5021 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +515,7 @@
 				CBACC9391EE7785800E702AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBACC93A1EE7785800E702AB /* Build configuration list for PBXNativeTarget "TestCodeTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +524,7 @@
 				CBACC93C1EE7785800E702AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBACC93D1EE7785800E702AB /* Build configuration list for PBXNativeTarget "TestCodeUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +533,7 @@
 				CBACC93F1EE7785800E702AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
