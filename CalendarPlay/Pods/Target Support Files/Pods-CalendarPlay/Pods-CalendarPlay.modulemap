@@ -1,0 +1,6 @@
+framework module Pods_CalendarPlay {
+  umbrella header "Pods-CalendarPlay-umbrella.h"
+
+  export *
+  module * { export * }
+}

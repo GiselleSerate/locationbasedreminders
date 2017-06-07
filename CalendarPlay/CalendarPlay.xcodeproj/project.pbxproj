@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C8876D417427F63F5D84D5C5 /* Pods_CalendarPlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A5D2A6AC467F6B92A57192 /* Pods_CalendarPlay.framework */; };
+		CB9285201EE879580038A00F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB92851F1EE879580038A00F /* GoogleService-Info.plist */; };
+		CB9285211EE879580038A00F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB92851F1EE879580038A00F /* GoogleService-Info.plist */; };
+		CB9285221EE879580038A00F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB92851F1EE879580038A00F /* GoogleService-Info.plist */; };
 		CBBCA2881EE8749D008B5021 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBCA2871EE8749D008B5021 /* AppDelegate.swift */; };
 		CBBCA28A1EE8749D008B5021 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBCA2891EE8749D008B5021 /* ViewController.swift */; };
 		CBBCA28D1EE8749D008B5021 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBBCA28B1EE8749D008B5021 /* Main.storyboard */; };
@@ -34,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		76BB02B5706A0D049DD5D566 /* Pods-CalendarPlay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarPlay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CalendarPlay/Pods-CalendarPlay.debug.xcconfig"; sourceTree = "<group>"; };
+		C53AD53FB5CDF5C93282AC3A /* Pods-CalendarPlay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarPlay.release.xcconfig"; path = "Pods/Target Support Files/Pods-CalendarPlay/Pods-CalendarPlay.release.xcconfig"; sourceTree = "<group>"; };
+		CB92851F1EE879580038A00F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CBBCA2841EE8749D008B5021 /* CalendarPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalendarPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBBCA2871EE8749D008B5021 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBBCA2891EE8749D008B5021 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +54,7 @@
 		CBBCA2A31EE8749E008B5021 /* CalendarPlayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalendarPlayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBBCA2A71EE8749E008B5021 /* CalendarPlayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPlayUITests.swift; sourceTree = "<group>"; };
 		CBBCA2A91EE8749E008B5021 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2A5D2A6AC467F6B92A57192 /* Pods_CalendarPlay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalendarPlay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8876D417427F63F5D84D5C5 /* Pods_CalendarPlay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,13 +83,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		194C69CA5E2B7CCA3F39C5BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				76BB02B5706A0D049DD5D566 /* Pods-CalendarPlay.debug.xcconfig */,
+				C53AD53FB5CDF5C93282AC3A /* Pods-CalendarPlay.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		291B70CB1A6DF5E65FEEA1C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2A5D2A6AC467F6B92A57192 /* Pods_CalendarPlay.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CBBCA27B1EE8749D008B5021 = {
 			isa = PBXGroup;
 			children = (
+				CB92851F1EE879580038A00F /* GoogleService-Info.plist */,
 				CBBCA2861EE8749D008B5021 /* CalendarPlay */,
 				CBBCA29B1EE8749E008B5021 /* CalendarPlayTests */,
 				CBBCA2A61EE8749E008B5021 /* CalendarPlayUITests */,
 				CBBCA2851EE8749D008B5021 /* Products */,
+				194C69CA5E2B7CCA3F39C5BE /* Pods */,
+				291B70CB1A6DF5E65FEEA1C5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,9 +161,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CBBCA2AC1EE8749E008B5021 /* Build configuration list for PBXNativeTarget "CalendarPlay" */;
 			buildPhases = (
+				FB25AC9A16501BD4A6342628 /* [CP] Check Pods Manifest.lock */,
 				CBBCA2801EE8749D008B5021 /* Sources */,
 				CBBCA2811EE8749D008B5021 /* Frameworks */,
 				CBBCA2821EE8749D008B5021 /* Resources */,
+				004F3102C31F7BD6C9D7CCCE /* [CP] Embed Pods Frameworks */,
+				4DF7AD6F2220025C08BB12D3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -233,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBBCA2921EE8749E008B5021 /* LaunchScreen.storyboard in Resources */,
+				CB9285201EE879580038A00F /* GoogleService-Info.plist in Resources */,
 				CBBCA28F1EE8749E008B5021 /* Assets.xcassets in Resources */,
 				CBBCA28D1EE8749D008B5021 /* Main.storyboard in Resources */,
 			);
@@ -242,6 +275,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB9285211EE879580038A00F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,10 +283,59 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB9285221EE879580038A00F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		004F3102C31F7BD6C9D7CCCE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CalendarPlay/Pods-CalendarPlay-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4DF7AD6F2220025C08BB12D3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CalendarPlay/Pods-CalendarPlay-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB25AC9A16501BD4A6342628 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CBBCA2801EE8749D008B5021 /* Sources */ = {
@@ -412,6 +495,7 @@
 		};
 		CBBCA2AD1EE8749E008B5021 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76BB02B5706A0D049DD5D566 /* Pods-CalendarPlay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CalendarPlay/Info.plist;
@@ -424,6 +508,7 @@
 		};
 		CBBCA2AE1EE8749E008B5021 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C53AD53FB5CDF5C93282AC3A /* Pods-CalendarPlay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CalendarPlay/Info.plist;
@@ -507,6 +592,7 @@
 				CBBCA2AE1EE8749E008B5021 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBBCA2AF1EE8749E008B5021 /* Build configuration list for PBXNativeTarget "CalendarPlayTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +601,7 @@
 				CBBCA2B11EE8749E008B5021 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBBCA2B21EE8749E008B5021 /* Build configuration list for PBXNativeTarget "CalendarPlayUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +610,7 @@
 				CBBCA2B41EE8749E008B5021 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
