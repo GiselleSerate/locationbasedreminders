@@ -14,8 +14,18 @@ import UIKit
     private var ratingButtons = [UIButton]()
     var rating = 0
     
-    @IBInspectable var starSize: CGSize = CGSize(width: 44.0, height: 44.0)
-    @IBInspectable var starCount: Int = 5
+    @IBInspectable var starSize: CGSize = CGSize(width: 44.0, height: 44.0) {
+        didSet {
+            setupButtons()
+        }
+    }
+    
+    @IBInspectable var starCount: Int = 5 {
+        didSet {
+            setupButtons()
+            
+        }
+    }
 
     
     //MARK: Initialization
@@ -34,6 +44,14 @@ import UIKit
     //MARK: Private Methods
     
     private func setupButtons() {
+        
+        for button in ratingButtons {
+            removeArrangedSubview(button)
+            button.removeFromSuperview()
+        }
+        
+        ratingButtons.removeAll()
+        
         for _ in 0..<starCount {
             // Create a button.
             let button = UIButton()
