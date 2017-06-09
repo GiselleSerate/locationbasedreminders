@@ -1,0 +1,530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CB1EB68D1EEB17E5007F8059 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1EB68C1EEB17E5007F8059 /* AppDelegate.swift */; };
+		CB1EB68F1EEB17E5007F8059 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1EB68E1EEB17E5007F8059 /* ViewController.swift */; };
+		CB1EB6921EEB17E5007F8059 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB1EB6901EEB17E5007F8059 /* Main.storyboard */; };
+		CB1EB6941EEB17E5007F8059 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB1EB6931EEB17E5007F8059 /* Assets.xcassets */; };
+		CB1EB6971EEB17E5007F8059 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB1EB6951EEB17E5007F8059 /* LaunchScreen.storyboard */; };
+		CB1EB6A21EEB17E6007F8059 /* Recipe_ThingyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1EB6A11EEB17E6007F8059 /* Recipe_ThingyTests.swift */; };
+		CB1EB6AD1EEB17E6007F8059 /* Recipe_ThingyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1EB6AC1EEB17E6007F8059 /* Recipe_ThingyUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CB1EB69E1EEB17E6007F8059 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB1EB6811EEB17E5007F8059 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB1EB6881EEB17E5007F8059;
+			remoteInfo = "Recipe Thingy";
+		};
+		CB1EB6A91EEB17E6007F8059 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB1EB6811EEB17E5007F8059 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB1EB6881EEB17E5007F8059;
+			remoteInfo = "Recipe Thingy";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CB1EB6891EEB17E5007F8059 /* Recipe Thingy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Recipe Thingy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB1EB68C1EEB17E5007F8059 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CB1EB68E1EEB17E5007F8059 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CB1EB6911EEB17E5007F8059 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CB1EB6931EEB17E5007F8059 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CB1EB6961EEB17E5007F8059 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CB1EB6981EEB17E5007F8059 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB1EB69D1EEB17E6007F8059 /* Recipe ThingyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Recipe ThingyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB1EB6A11EEB17E6007F8059 /* Recipe_ThingyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe_ThingyTests.swift; sourceTree = "<group>"; };
+		CB1EB6A31EEB17E6007F8059 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB1EB6A81EEB17E6007F8059 /* Recipe ThingyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Recipe ThingyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB1EB6AC1EEB17E6007F8059 /* Recipe_ThingyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe_ThingyUITests.swift; sourceTree = "<group>"; };
+		CB1EB6AE1EEB17E6007F8059 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB1EB6861EEB17E5007F8059 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB1EB69A1EEB17E6007F8059 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB1EB6A51EEB17E6007F8059 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CB1EB6801EEB17E5007F8059 = {
+			isa = PBXGroup;
+			children = (
+				CB1EB68B1EEB17E5007F8059 /* Recipe Thingy */,
+				CB1EB6A01EEB17E6007F8059 /* Recipe ThingyTests */,
+				CB1EB6AB1EEB17E6007F8059 /* Recipe ThingyUITests */,
+				CB1EB68A1EEB17E5007F8059 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CB1EB68A1EEB17E5007F8059 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB1EB6891EEB17E5007F8059 /* Recipe Thingy.app */,
+				CB1EB69D1EEB17E6007F8059 /* Recipe ThingyTests.xctest */,
+				CB1EB6A81EEB17E6007F8059 /* Recipe ThingyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB1EB68B1EEB17E5007F8059 /* Recipe Thingy */ = {
+			isa = PBXGroup;
+			children = (
+				CB1EB68C1EEB17E5007F8059 /* AppDelegate.swift */,
+				CB1EB68E1EEB17E5007F8059 /* ViewController.swift */,
+				CB1EB6901EEB17E5007F8059 /* Main.storyboard */,
+				CB1EB6931EEB17E5007F8059 /* Assets.xcassets */,
+				CB1EB6951EEB17E5007F8059 /* LaunchScreen.storyboard */,
+				CB1EB6981EEB17E5007F8059 /* Info.plist */,
+			);
+			path = "Recipe Thingy";
+			sourceTree = "<group>";
+		};
+		CB1EB6A01EEB17E6007F8059 /* Recipe ThingyTests */ = {
+			isa = PBXGroup;
+			children = (
+				CB1EB6A11EEB17E6007F8059 /* Recipe_ThingyTests.swift */,
+				CB1EB6A31EEB17E6007F8059 /* Info.plist */,
+			);
+			path = "Recipe ThingyTests";
+			sourceTree = "<group>";
+		};
+		CB1EB6AB1EEB17E6007F8059 /* Recipe ThingyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CB1EB6AC1EEB17E6007F8059 /* Recipe_ThingyUITests.swift */,
+				CB1EB6AE1EEB17E6007F8059 /* Info.plist */,
+			);
+			path = "Recipe ThingyUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB1EB6881EEB17E5007F8059 /* Recipe Thingy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB1EB6B11EEB17E6007F8059 /* Build configuration list for PBXNativeTarget "Recipe Thingy" */;
+			buildPhases = (
+				CB1EB6851EEB17E5007F8059 /* Sources */,
+				CB1EB6861EEB17E5007F8059 /* Frameworks */,
+				CB1EB6871EEB17E5007F8059 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Recipe Thingy";
+			productName = "Recipe Thingy";
+			productReference = CB1EB6891EEB17E5007F8059 /* Recipe Thingy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CB1EB69C1EEB17E6007F8059 /* Recipe ThingyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB1EB6B41EEB17E6007F8059 /* Build configuration list for PBXNativeTarget "Recipe ThingyTests" */;
+			buildPhases = (
+				CB1EB6991EEB17E6007F8059 /* Sources */,
+				CB1EB69A1EEB17E6007F8059 /* Frameworks */,
+				CB1EB69B1EEB17E6007F8059 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB1EB69F1EEB17E6007F8059 /* PBXTargetDependency */,
+			);
+			name = "Recipe ThingyTests";
+			productName = "Recipe ThingyTests";
+			productReference = CB1EB69D1EEB17E6007F8059 /* Recipe ThingyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CB1EB6A71EEB17E6007F8059 /* Recipe ThingyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB1EB6B71EEB17E6007F8059 /* Build configuration list for PBXNativeTarget "Recipe ThingyUITests" */;
+			buildPhases = (
+				CB1EB6A41EEB17E6007F8059 /* Sources */,
+				CB1EB6A51EEB17E6007F8059 /* Frameworks */,
+				CB1EB6A61EEB17E6007F8059 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB1EB6AA1EEB17E6007F8059 /* PBXTargetDependency */,
+			);
+			name = "Recipe ThingyUITests";
+			productName = "Recipe ThingyUITests";
+			productReference = CB1EB6A81EEB17E6007F8059 /* Recipe ThingyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB1EB6811EEB17E5007F8059 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = cssummer17;
+				TargetAttributes = {
+					CB1EB6881EEB17E5007F8059 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+					CB1EB69C1EEB17E6007F8059 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CB1EB6881EEB17E5007F8059;
+					};
+					CB1EB6A71EEB17E6007F8059 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CB1EB6881EEB17E5007F8059;
+					};
+				};
+			};
+			buildConfigurationList = CB1EB6841EEB17E5007F8059 /* Build configuration list for PBXProject "Recipe Thingy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CB1EB6801EEB17E5007F8059;
+			productRefGroup = CB1EB68A1EEB17E5007F8059 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB1EB6881EEB17E5007F8059 /* Recipe Thingy */,
+				CB1EB69C1EEB17E6007F8059 /* Recipe ThingyTests */,
+				CB1EB6A71EEB17E6007F8059 /* Recipe ThingyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB1EB6871EEB17E5007F8059 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB1EB6971EEB17E5007F8059 /* LaunchScreen.storyboard in Resources */,
+				CB1EB6941EEB17E5007F8059 /* Assets.xcassets in Resources */,
+				CB1EB6921EEB17E5007F8059 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB1EB69B1EEB17E6007F8059 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB1EB6A61EEB17E6007F8059 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB1EB6851EEB17E5007F8059 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB1EB68F1EEB17E5007F8059 /* ViewController.swift in Sources */,
+				CB1EB68D1EEB17E5007F8059 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB1EB6991EEB17E6007F8059 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB1EB6A21EEB17E6007F8059 /* Recipe_ThingyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB1EB6A41EEB17E6007F8059 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB1EB6AD1EEB17E6007F8059 /* Recipe_ThingyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CB1EB69F1EEB17E6007F8059 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB1EB6881EEB17E5007F8059 /* Recipe Thingy */;
+			targetProxy = CB1EB69E1EEB17E6007F8059 /* PBXContainerItemProxy */;
+		};
+		CB1EB6AA1EEB17E6007F8059 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB1EB6881EEB17E5007F8059 /* Recipe Thingy */;
+			targetProxy = CB1EB6A91EEB17E6007F8059 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CB1EB6901EEB17E5007F8059 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB1EB6911EEB17E5007F8059 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CB1EB6951EEB17E5007F8059 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB1EB6961EEB17E5007F8059 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CB1EB6AF1EEB17E6007F8059 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CB1EB6B01EEB17E6007F8059 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CB1EB6B21EEB17E6007F8059 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Recipe Thingy/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.startup.Recipe-Thingy";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		CB1EB6B31EEB17E6007F8059 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Recipe Thingy/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.startup.Recipe-Thingy";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		CB1EB6B51EEB17E6007F8059 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Recipe ThingyTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.startup.Recipe-ThingyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Recipe Thingy.app/Recipe Thingy";
+			};
+			name = Debug;
+		};
+		CB1EB6B61EEB17E6007F8059 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Recipe ThingyTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.startup.Recipe-ThingyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Recipe Thingy.app/Recipe Thingy";
+			};
+			name = Release;
+		};
+		CB1EB6B81EEB17E6007F8059 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "Recipe ThingyUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.startup.Recipe-ThingyUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Recipe Thingy";
+			};
+			name = Debug;
+		};
+		CB1EB6B91EEB17E6007F8059 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "Recipe ThingyUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.startup.Recipe-ThingyUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Recipe Thingy";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB1EB6841EEB17E5007F8059 /* Build configuration list for PBXProject "Recipe Thingy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB1EB6AF1EEB17E6007F8059 /* Debug */,
+				CB1EB6B01EEB17E6007F8059 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB1EB6B11EEB17E6007F8059 /* Build configuration list for PBXNativeTarget "Recipe Thingy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB1EB6B21EEB17E6007F8059 /* Debug */,
+				CB1EB6B31EEB17E6007F8059 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CB1EB6B41EEB17E6007F8059 /* Build configuration list for PBXNativeTarget "Recipe ThingyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB1EB6B51EEB17E6007F8059 /* Debug */,
+				CB1EB6B61EEB17E6007F8059 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CB1EB6B71EEB17E6007F8059 /* Build configuration list for PBXNativeTarget "Recipe ThingyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB1EB6B81EEB17E6007F8059 /* Debug */,
+				CB1EB6B91EEB17E6007F8059 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CB1EB6811EEB17E5007F8059 /* Project object */;
+}
