@@ -43,5 +43,7 @@
 	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Put phooots in your mealssss</string>
+	<key>NSCameraUsageDescription</key>
+	<string>i mean im not using ur photos bruh</string>
 </dict>
 </plist>
