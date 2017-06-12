@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MealViewController.swift
 //  FoodTracker
 //
 //  Created by Jane Appleseed on 10/17/16.
@@ -15,9 +15,13 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var ratingControl: RatingControl!
-    // Passed by 'MealTableViewController' in 'prepare(for:sender:)' or constructed as part of adding a new meal.
-    var meal: Meal?
     @IBOutlet weak var saveButton: UIBarButtonItem!
+    
+    /*
+         This value is either passed by `MealTableViewController` in `prepare(for:sender:)`
+         or constructed as part of adding a new meal.
+     */
+    var meal: Meal?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,19 +29,21 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         // Handle the text field’s user input through delegate callbacks.
         nameTextField.delegate = self
         
+        // Enable the Save button only if the text field has a valid Meal name.
         updateSaveButtonState()
     }
     
     //MARK: UITextFieldDelegate
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        // Disable the Save button while editing.
+        saveButton.isEnabled = false
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // Hide the keyboard.
         textField.resignFirstResponder()
         return true
-    }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        saveButton.isEnabled = false
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -71,16 +77,22 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         dismiss(animated: true, completion: nil)
     }
     
-    // You can configure a view controller before it's presented. 
+    // This method lets you configure a view controller before it's presented.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         super.prepare(for: segue, sender: sender)
+        
+        // Configure the destination view controller only when the save button is pressed.
         guard let button = sender as? UIBarButtonItem, button === saveButton else {
-            os_log("The save button was not pressed, cancelling instead", log: OSLog.default, type: .default)
+            os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
             return
         }
+        
         let name = nameTextField.text ?? ""
         let photo = photoImageView.image
         let rating = ratingControl.rating
+        
+        // Set the meal to be passed to MealTableViewController after the unwind segue.
         meal = Meal(name: name, photo: photo, rating: rating)
     }
     
@@ -104,6 +116,7 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     //MARK: Private Methods
     
     private func updateSaveButtonState() {
+        // Disable the Save button if the text field is empty.
         let text = nameTextField.text ?? ""
         saveButton.isEnabled = !text.isEmpty
     }
