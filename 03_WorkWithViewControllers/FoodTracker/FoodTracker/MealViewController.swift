@@ -19,19 +19,13 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     var meal: Meal?
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
-    override func viewWillAppear(_ animated: Bool) {
-        print("view will appear")
-    }
-    
     override func viewDidLoad() {
-        print("The view did actually load.")
         super.viewDidLoad()
         
         // Handle the text field’s user input through delegate callbacks.
         nameTextField.delegate = self
         
         updateSaveButtonState()
-        print("End of viewdidload")
     }
     
     //MARK: UITextFieldDelegate
