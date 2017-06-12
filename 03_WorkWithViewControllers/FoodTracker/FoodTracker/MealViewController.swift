@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MealViewController.swift
 //  FoodTracker
 //
 //  Created by Jane Appleseed on 10/17/16.
@@ -19,13 +19,19 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     var meal: Meal?
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
+    override func viewWillAppear(_ animated: Bool) {
+        print("view will appear")
+    }
+    
     override func viewDidLoad() {
+        print("The view did actually load.")
         super.viewDidLoad()
         
         // Handle the text field’s user input through delegate callbacks.
         nameTextField.delegate = self
         
         updateSaveButtonState()
+        print("End of viewdidload")
     }
     
     //MARK: UITextFieldDelegate
@@ -75,7 +81,7 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         guard let button = sender as? UIBarButtonItem, button === saveButton else {
-            os_log("The save button was not pressed, cancelling instead", log: OSLog.default, type: .default)
+            os_log("The save button was not pressed, cancelling instead", log: OSLog.default, type: .debug)
             return
         }
         let name = nameTextField.text ?? ""

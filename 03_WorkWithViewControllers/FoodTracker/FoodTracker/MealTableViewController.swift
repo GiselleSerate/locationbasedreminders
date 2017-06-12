@@ -14,6 +14,7 @@ class MealTableViewController: UITableViewController {
     var meals = [Meal]()
 
     override func viewDidLoad() {
+        print("hello from mealtableviewcontroller")
         super.viewDidLoad()
 
         // I have samples. Come over and try.
