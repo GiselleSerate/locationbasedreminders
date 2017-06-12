@@ -12,7 +12,11 @@ import UIKit
     
     //MARK: Properties
     private var ratingButtons = [UIButton]()
-    var rating = 0
+    var rating = 0 {
+        didSet {
+            updateButtonSelectionStates()
+        }
+    }
     
     @IBInspectable var starSize: CGSize = CGSize(width: 44.0, height: 44.0) {
         didSet {
@@ -52,10 +56,21 @@ import UIKit
         
         ratingButtons.removeAll()
         
+        // Load the button images.
+        let bundle = Bundle(for: type(of: self))
+        let filledStar = UIImage(named: "filledStar", in: bundle, compatibleWith: self.traitCollection)
+        let emptyStar = UIImage(named:"emptyStar", in: bundle, compatibleWith: self.traitCollection)
+        let highlightedStar = UIImage(named:"highlightedStar", in: bundle, compatibleWith: self.traitCollection)
+        
         for _ in 0..<starCount {
             // Create a button.
             let button = UIButton()
-            button.backgroundColor = UIColor.red
+            
+            // Set button images.
+            button.setImage(emptyStar, for: .normal)
+            button.setImage(filledStar, for: .selected)
+            button.setImage(highlightedStar, for: .highlighted)
+            button.setImage(highlightedStar, for: [.highlighted, .selected])
             
             // Add constraints.
             button.translatesAutoresizingMaskIntoConstraints = false
@@ -71,13 +86,35 @@ import UIKit
             // Put the button in the rating button array. 
             ratingButtons.append(button)
         }
+        
+        updateButtonSelectionStates()
+        
     }
     
     
     //MARK: Button Action
     
     func ratingButtonTapped(button: UIButton) {
-        print("we push the button yay")
+        guard let index = ratingButtons.index(of: button) else {
+            fatalError("The button, \(button), is not in the ratingButtons array: \(ratingButtons)")
+        }
+        
+        // What rating is this?
+        let selectedRating = index + 1
+        
+        if selectedRating == rating {
+            rating = 0                  // Clear rating.
+        }
+        else {
+            rating = selectedRating     // They actually wanted a rating.
+        }
+    }
+    
+    private func updateButtonSelectionStates() {
+        for (index, button) in ratingButtons.enumerated() {
+            // If the button index is less than the rating, selecty the button.
+            button.isSelected = index < rating
+        }
     }
 
 }
