@@ -9,15 +9,15 @@
 import UIKit
 
 class MealTableViewController: UITableViewController {
+    
+    //MARK: Properties
+    var meals = [Meal]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        // I have samples. Come over and try.
+        loadSampleMeals()
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,25 +28,32 @@ class MealTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return meals.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cellIdentifier = "MealTableViewCell"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? MealTableViewCell else {
+            fatalError("The dequeued cell is not an instance of MealTableViewCell.")
+        }
+        
+        //Get the meal for the data source layout.
+        let meal = meals[indexPath.row]
+        
+        cell.nameLabel.text = meal.name
+        cell.photoImageView.image = meal.photo
+        cell.ratingControl.rating = meal.rating
 
-        // Configure the cell...
 
         return cell
     }
-    */
 
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -92,4 +99,25 @@ class MealTableViewController: UITableViewController {
     }
     */
 
+    //MARK: Private Methods
+    
+    private func loadSampleMeals() {
+        let dogePic = UIImage(named: "doge")
+        let trollPic = UIImage(named: "troll")
+        let foodPic = UIImage(named: "food")
+        
+        guard let dogeMeal = Meal(name: "much doge", photo: dogePic, rating: 5) else {
+            fatalError("such error can't make dogemeal")
+        }
+        
+        guard let trollMeal = Meal(name: "trollll", photo: trollPic, rating: 3) else {
+            fatalError("trololol trollmeal can't be started")
+        }
+        
+        guard let foodMeal = Meal(name: "Actual Food", photo: foodPic, rating: 0) else {
+            fatalError("I'm not a chef, I can't make food that isn't memey")
+        }
+        
+        meals += [dogeMeal, trollMeal, foodMeal]
+    }
 }
