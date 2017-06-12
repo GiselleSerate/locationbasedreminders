@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os.log
 
 class MealTableViewController: UITableViewController {
     
@@ -15,6 +16,8 @@ class MealTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.leftBarButtonItem = editButtonItem
 
         // I have samples. Come over and try.
         loadSampleMeals()
@@ -89,15 +92,37 @@ class MealTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        super.prepare(for: segue, sender: sender)
+        
+        switch(segue.identifier ?? "") {
+            case "AddItem":
+                os_log("Adding a new meal.", log: OSLog.default, type: .debug)
+            case "ShowDetail":
+                guard let mealDetailViewController = segue.destination as? MealViewController
+                    else {
+                        fatalError("Unexpected destination: \(segue.destination)")
+                    }
+                guard let selectedMealCell = sender as? MealTableViewCell
+                    else {
+                        fatalError("Unexpected sender: \(sender)")
+                    }
+                guard let indexPath = tableView.indexPath(for: selectedMealCell)
+                    else {
+                        fatalError("The selected cell is not being displayed by the table")
+                    }
+                let selectedMeal = meals[indexPath.row]
+                mealDetailViewController.meal = selectedMeal
+            default:
+                fatalError("Unexpected Segue Identifier; \(segue.identifier)")
+        }
     }
-    */
+ 
 
     //MARK: Private Methods
     
@@ -124,10 +149,19 @@ class MealTableViewController: UITableViewController {
     //MARK: Actions
     @IBAction func unwindToMealList(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.source as? MealViewController, let meal = sourceViewController.meal {
-            // Add a new meal. 
-            let newIndexPath = IndexPath(row: meals.count, section: 0)
-            meals.append(meal)
-            tableView.insertRows(at: [newIndexPath], with: .automatic)
+            
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                // update an existing meal
+                meals[selectedIndexPath.row] = meal
+                tableView.reloadRows(at: [selectedIndexPath], with: .none)
+            }
+            else {
+                // Add a new meal. 
+                let newIndexPath = IndexPath(row: meals.count, section: 0)
+                meals.append(meal)
+                tableView.insertRows(at: [newIndexPath], with: .automatic)
+            }
+            
         }
     }
 }
