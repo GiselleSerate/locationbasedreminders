@@ -19,8 +19,13 @@ class MealTableViewController: UITableViewController {
         
         navigationItem.leftBarButtonItem = editButtonItem
 
-        // I have samples. Come over and try.
-        loadSampleMeals()
+        if let savedMeals = loadMeals() { // but an empty array does make you fall into this if.
+            meals += savedMeals
+        }
+        else {
+            // I have samples. Come over and try.
+            loadSampleMeals()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -71,6 +76,7 @@ class MealTableViewController: UITableViewController {
         if editingStyle == .delete {
             // Delete the row from the data source
             meals.remove(at: indexPath.row)
+            saveMeals()
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -147,6 +153,21 @@ class MealTableViewController: UITableViewController {
         meals += [dogeMeal, trollMeal, foodMeal]
     }
     
+    private func saveMeals() {
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(meals, toFile: Meal.ArchiveURL.path)
+        if isSuccessfulSave {
+            os_log("Meals successfully saved.", log: OSLog.default, type: .debug)
+        }
+        else {
+            os_log("Failed to save meals.", log: OSLog.default, type: .error)
+        }
+    }
+    
+    private func loadMeals() -> [Meal]? {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Meal.ArchiveURL.path) as? [Meal]     // Optionally returns array of Meal objects.
+    }
+    
+    
     //MARK: Actions
     @IBAction func unwindToMealList(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.source as? MealViewController, let meal = sourceViewController.meal {
@@ -162,6 +183,8 @@ class MealTableViewController: UITableViewController {
                 meals.append(meal)
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
             }
+            
+            saveMeals()
             
         }
     }
